@@ -18,6 +18,7 @@ function Header() {
   const [dp, setdp] = useState("")
   const {userProfileUpdateStatus} = useContext(userProfileUpdateStatusContext)
   //console.log(token);
+   const navigate = useNavigate()
 
   const handleLogout = ()=>{
       sessionStorage.removeItem("existingUser")
