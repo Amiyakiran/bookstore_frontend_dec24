@@ -17,6 +17,10 @@ function Header() {
   const [dp, setdp] = useState("")
   const {userProfileUpdateStatus} = useContext(userProfileUpdateStatusContext)
   //console.log(token);
+
+  const handleLogout = ()=>{
+    
+  }
   
   useEffect(()=>{
 
@@ -92,7 +96,7 @@ function Header() {
               <div className="py-1" role="none">
                
                 <Link to={'/profile'}><p className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="menu-item-0"><FontAwesomeIcon icon={faAddressCard} className='me-2' /> Profile</p></Link>
-                <button className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="menu-item-1"><FontAwesomeIcon icon={faPowerOff} className='me-2' />Logout</button>
+                <button type="button" onClick={handleLogout} className="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabIndex="-1" id="menu-item-1"><FontAwesomeIcon icon={faPowerOff} className='me-2' />Logout</button>
                
               </div>
             </div>}
