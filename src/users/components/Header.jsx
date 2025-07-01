@@ -26,6 +26,7 @@ function Header() {
     sessionStorage.removeItem("token")
     navigate('/')
     setlogoutStatus(true)
+    setdropdownStatus(false)
   }
   
   useEffect(()=>{
