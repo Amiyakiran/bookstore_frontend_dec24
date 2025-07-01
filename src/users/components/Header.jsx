@@ -19,7 +19,9 @@ function Header() {
   //console.log(token);
 
   const handleLogout = ()=>{
-    
+      sessionStorage.removeItem("existingUser")
+    sessionStorage.removeItem("token")
+    navigate('/')
   }
   
   useEffect(()=>{
