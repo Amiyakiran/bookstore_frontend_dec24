@@ -16,6 +16,7 @@ function Header() {
   const [dropdownStatus, setdropdownStatus] = useState(false)
   const [token , setToken] = useState("")
   const [dp, setdp] = useState("")
+   const [logoutStatus, setlogoutStatus] = useState(false)
   const {userProfileUpdateStatus} = useContext(userProfileUpdateStatusContext)
   //console.log(token);
    const navigate = useNavigate()
@@ -24,6 +25,7 @@ function Header() {
       sessionStorage.removeItem("existingUser")
     sessionStorage.removeItem("token")
     navigate('/')
+    setlogoutStatus(true)
   }
   
   useEffect(()=>{
@@ -35,7 +37,7 @@ function Header() {
     setdp(user.profile)
    }
 
-  },[userProfileUpdateStatus])
+  },[userProfileUpdateStatus,logoutStatus])
 
   return (
     <>
